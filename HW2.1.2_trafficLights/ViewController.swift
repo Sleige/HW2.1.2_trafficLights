@@ -30,6 +30,22 @@ class ViewController: UIViewController {
 
     @IBAction func switchLight() {
         buttonStart.setTitle("NEXT", for: .normal)
+        
+        if red.alpha == 1 {
+            red.alpha = 0.3
+            yellow.alpha = 1
+            return
+        } else if yellow.alpha == 1 {
+            yellow.alpha = 0.3
+            green.alpha = 1
+            return
+        } else if green.alpha == 1 {
+            green.alpha = 0.3
+            red.alpha = 1
+            return
+        } else {
+            red.alpha = 1
+        }
     }
     
 }
