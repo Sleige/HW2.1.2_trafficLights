@@ -16,14 +16,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        red.layer.cornerRadius = red.frame.size.width / 2
-        yellow.layer.cornerRadius = yellow.bounds.width / 2
-        green.layer.cornerRadius = green.bounds.width / 2
+        red.alpha = 0.3
+        yellow.alpha = 0.3
+        green.alpha = 0.3
         buttonStart.layer.cornerRadius = 10
         
     }
+    override func viewWillLayoutSubviews(){
+        red.layer.cornerRadius = red.frame.size.width / 2
+        yellow.layer.cornerRadius = yellow.bounds.width / 2
+        green.layer.cornerRadius = green.bounds.width / 2
+    }
 
     @IBAction func switchLight() {
+        buttonStart.setTitle("NEXT", for: .normal)
     }
     
 }
