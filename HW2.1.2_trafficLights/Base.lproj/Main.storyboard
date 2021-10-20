@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQI-zY-Odr">
-                                <rect key="frame" x="142" y="274" width="130" height="132"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-d4-oJa">
-                                <rect key="frame" x="142" y="122" width="130" height="132"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-5H-aNs">
-                                <rect key="frame" x="142" y="426" width="130" height="132"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-Xo-pYv">
                                 <rect key="frame" x="97" y="720" width="220" height="77"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -39,22 +27,49 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemOrangeColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyS-u3-VNR"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQI-zY-Odr">
+                                <rect key="frame" x="114" y="270" width="186" height="186"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-d4-oJa">
+                                <rect key="frame" x="114" y="64" width="186" height="186"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-5H-aNs">
+                                <rect key="frame" x="114" y="476" width="186" height="186"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="lsc-d4-oJa" firstAttribute="height" secondItem="OQI-zY-Odr" secondAttribute="height" id="1aL-KU-g9Z"/>
-                            <constraint firstItem="lsc-d4-oJa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2zr-er-366"/>
-                            <constraint firstItem="OQI-zY-Odr" firstAttribute="height" secondItem="BvG-5H-aNs" secondAttribute="height" id="9lv-Oo-KcB"/>
-                            <constraint firstItem="BvG-5H-aNs" firstAttribute="width" secondItem="OQI-zY-Odr" secondAttribute="width" id="Dua-Qw-Wyt"/>
-                            <constraint firstItem="BvG-5H-aNs" firstAttribute="top" secondItem="OQI-zY-Odr" secondAttribute="bottom" constant="20" id="S26-JQ-mam"/>
-                            <constraint firstItem="OQI-zY-Odr" firstAttribute="top" secondItem="lsc-d4-oJa" secondAttribute="bottom" constant="20" id="VVC-uL-R9u"/>
+                            <constraint firstItem="BvG-5H-aNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Uu-Hu-vev"/>
+                            <constraint firstItem="OQI-zY-Odr" firstAttribute="width" secondItem="BvG-5H-aNs" secondAttribute="height" multiplier="1:1" id="269-Af-RaE"/>
+                            <constraint firstItem="OQI-zY-Odr" firstAttribute="height" secondItem="lsc-d4-oJa" secondAttribute="height" id="Bq0-21-eTT"/>
+                            <constraint firstItem="lsc-d4-oJa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLs-Me-3IX"/>
+                            <constraint firstItem="OQI-zY-Odr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NrB-L7-z1N"/>
+                            <constraint firstItem="BvG-5H-aNs" firstAttribute="height" secondItem="lsc-d4-oJa" secondAttribute="height" id="YE1-3N-e9c"/>
                             <constraint firstItem="CeW-Xo-pYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YUH-L1-WSF"/>
-                            <constraint firstItem="lsc-d4-oJa" firstAttribute="width" secondItem="OQI-zY-Odr" secondAttribute="width" id="ngK-sQ-1xZ"/>
+                            <constraint firstItem="OQI-zY-Odr" firstAttribute="width" secondItem="lsc-d4-oJa" secondAttribute="width" id="a8P-2P-Ueg"/>
+                            <constraint firstItem="lsc-d4-oJa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kIf-oE-RFd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BvG-5H-aNs" secondAttribute="bottom" constant="200" id="kmS-3i-zI5"/>
+                            <constraint firstItem="BvG-5H-aNs" firstAttribute="top" secondItem="OQI-zY-Odr" secondAttribute="bottom" constant="20" id="neo-d1-qhx"/>
+                            <constraint firstItem="lsc-d4-oJa" firstAttribute="width" secondItem="OQI-zY-Odr" secondAttribute="height" multiplier="1:1" id="r4R-UN-rUi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CeW-Xo-pYv" secondAttribute="bottom" constant="65" id="sMJ-Sv-xdX"/>
+                            <constraint firstItem="BvG-5H-aNs" firstAttribute="width" secondItem="lsc-d4-oJa" secondAttribute="width" id="vdq-QP-21L"/>
+                            <constraint firstItem="OQI-zY-Odr" firstAttribute="top" secondItem="lsc-d4-oJa" secondAttribute="bottom" constant="20" id="wXU-Q3-hYQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonStart" destination="CeW-Xo-pYv" id="6M0-O6-kUO"/>
+                        <outlet property="green" destination="BvG-5H-aNs" id="UrY-TR-DR0"/>
+                        <outlet property="red" destination="lsc-d4-oJa" id="JyF-iV-90J"/>
+                        <outlet property="yellow" destination="OQI-zY-Odr" id="BWe-kC-TcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
